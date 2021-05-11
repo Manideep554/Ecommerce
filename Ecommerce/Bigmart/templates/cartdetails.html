@@ -1,0 +1,36 @@
+<html>
+<head>
+    {%if user.is_authenticated%}
+    <h1 align="center" >Welcome {{user.username}}</h1>
+    <center><h3><a href="/Bigmart/productspage/">Add Some more Products</a></h3>
+    <a href="/Bigmart/logout/" >Logout</a><br></center>
+    {%endif%}
+</head>
+<body>
+<center>
+<table border="1">
+    <th>image</th>
+    <th>product-id</th>
+    <th>product-name</th>
+    <th>price</th>
+    <th>category</th>
+    <th>details</th>
+    <th>Remove from cart</th>
+    {% for i in product_details %}
+    <tr>
+        <td><img src="/static/images/media/{{i.image}}"  width="30" height="30"></td>
+        <td><center>{{i.product_id}}</center></td>
+        <td>{{i.product_id__name}}</td>
+        <td>{{i.product_id__price}}</td>
+        <td><center>{{i.product_id__category_id__name}}</center></td>
+        <td><a href="/Bigmart/productdetails/{{i.id}}/">details</a></td>
+        <td><center><a href="/Bigmart/delete/{{i.product_id}}">Delete</a></center></td>
+    </tr>
+{%endfor%}
+</table>
+    Total price of products : {{total}}/-
+    <br>
+    {{count}}
+</center>
+</body>
+</html>

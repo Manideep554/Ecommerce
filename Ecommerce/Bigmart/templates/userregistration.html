@@ -1,0 +1,16 @@
+<html>
+<head>
+    <h1 align="center">welcome to Bigmart</h1>
+</head>
+<body>
+<center>
+<form method="POST" action="/Bigmart/register/">
+    {%csrf_token%}
+    <table border="1">
+    {{form.as_table}}
+        </table>
+     <button type="submit">Register</button><br>
+</form>
+</center>
+</body>
+</html>

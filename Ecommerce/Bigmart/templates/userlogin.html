@@ -1,0 +1,21 @@
+<html>
+<body>
+<form method="POST"  action="/Bigmart/login/" >
+    {% csrf_token %}
+    <center>
+        <h3>Log In For Better Experience</h3>
+    <table>
+        <tr>
+   <td>username:</td>  <td><input type="text" name="username"></td>
+         </tr>
+     <tr>
+            <td>Password:</td><td> <input type="password" name="password"></td>
+            </tr>
+        </table>
+
+         <button type="submit">Login</button>   <br>     <a href="/Bigmart/register/">Signup</a>
+    <br>{{comment}}
+    </center>
+</form>
+</body>
+</html>

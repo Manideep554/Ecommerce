@@ -1,0 +1,26 @@
+<html>
+<head>
+    {%if user.is_authenticated%}
+    <h1 align="center" >Welcome {{user.username}}
+        <a href="/Bigmart/cartdetails/{{user.id}}/">
+        <img hspace="30" src="/static/images/media/product_image/cart_image.png" align="right"  width="30" height="30">
+    </a></h1><br>
+    <center>
+    <a href="/Bigmart/logout/" >Logout</a><br></center>
+    {%else%}
+    <center><a href="/Bigmart/login/"><button>login</button></a></center>
+    {%endif%}
+</head>
+<body>
+
+<center>
+    {% for i in product_data %}
+    <td>
+        <a href="/Bigmart/productdetails/{{i.id}}/">
+            <img src="/static/images/media/{{i.image}}" title="{{i.product_id__name}}" name="deep" width="26%" height="55%">
+        </a>
+        </td>
+    {% endfor %}
+    </center>
+</body>
+</html>
