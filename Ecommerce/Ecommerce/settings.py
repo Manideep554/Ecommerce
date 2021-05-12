@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Bigmart_server',
-        'USER':'postgres',
-        'PASSWORD':'d1999'
+        'USER':'',
+        'PASSWORD':''
 
     }
 }
